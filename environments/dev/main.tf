@@ -13,3 +13,10 @@ module "network" {
   address_space       = var.address_space
   subnet_prefixes     = var.subnet_prefixes
 }
+
+module "nsg" {
+  source              = "../../modules/nsg"
+  nsg_name            = var.nsg_name
+  location            = var.location
+  resource_group_name = module.resource_group.name
+}

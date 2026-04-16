@@ -9,3 +9,11 @@ output "vnet_name" {
 output "subnet_id" {
   value = module.network.subnet_id
 }
+
+output "nsg_name" {
+  value = module.nsg.nsg_name
+}
+
+output "nsg_id" {
+  value = module.nsg.nsg_id
+}
