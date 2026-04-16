@@ -25,3 +25,7 @@ variable "subnet_prefixes" {
 variable "nsg_name" {
   type = string
 }
+
+variable "storage_account_name" {
+  type = string
+}
