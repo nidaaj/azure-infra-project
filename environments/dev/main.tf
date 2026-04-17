@@ -27,3 +27,17 @@ module "storage" {
   resource_group_name  = module.resource_group.name
   location             = var.location
 }
+
+module "vm" {
+  source              = "../../modules/vm"
+  public_ip_name      = var.public_ip_name
+  nic_name            = var.nic_name
+  vm_name             = var.vm_name
+  vm_size             = var.vm_size
+  location            = var.location
+  resource_group_name = module.resource_group.name
+  subnet_id           = module.network.subnet_id
+  nsg_id              = module.nsg.nsg_id
+  admin_username      = var.admin_username
+  admin_password      = var.admin_password
+}

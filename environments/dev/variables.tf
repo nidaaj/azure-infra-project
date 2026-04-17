@@ -29,3 +29,28 @@ variable "nsg_name" {
 variable "storage_account_name" {
   type = string
 }
+
+variable "public_ip_name" {
+  type = string
+}
+
+variable "nic_name" {
+  type = string
+}
+
+variable "vm_name" {
+  type = string
+}
+
+variable "vm_size" {
+  type = string
+}
+
+variable "admin_username" {
+  type = string
+}
+
+variable "admin_password" {
+  type      = string
+  sensitive = true
+}
